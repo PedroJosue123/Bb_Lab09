@@ -1,0 +1,18 @@
+<html>
+   <head>
+      <title> <%= titulo %> </title>
+   </head>
+   <body>
+      <H1> <%= titulo %> </H1>
+      <HR>
+      <H2> Nombre: <%= nombre %> </H2>
+      <H2> Grado: <%= grado %> </H2>
+      <HR>
+      <H3> Monedas </H3>
+      <UL>
+         <% monedas.forEach(function(moneda) { %>
+            <LI> <%= moneda.nombre %> - <%= moneda.pais %> </LI>
+         <% }); %>
+      </UL>
+   </body>
+</html>

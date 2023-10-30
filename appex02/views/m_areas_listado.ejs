@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Sistema de control de Ingreso</title>
+    </head>
+<body>
+        <h1>Mantenimiento de cargos</h1>
+        <hr>
+        <p><a href="/m_areas_nuevo">Nuevo Cargo</a></p>
+        <table border=1>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>ABREVIATURA</th>
+                <th>ESTADO</th>
+                <th colspan=2>ACCIONES</th>
+            </tr>
+        <% records.forEach(function(area){ %>
+            <tr>
+                <td><%= area._id %></td>
+                <td><%= area.Nombre %></td>
+                <td><%= area.Abreviatura %></td>
+                <td><%= area.Estado %></td>
+                <td><a href="/m_areas_editar/<%= area._id %>">Editar</a></td>
+                <td><a href="/m_areas_eliminar/<%= area._id %>">Eliminar</a></td>
+            </tr>
+        <% }); %>
+        </table>
+    </body>
+</html>
